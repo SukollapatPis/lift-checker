@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Lift Checker</title>
+    <script>
+        function checkWeight() {
+            var count = 0;
+            var sumw = 0;
+            var w = 0;
+            while (w >= 0) {
+                w = parseInt(prompt("Enter weight " + (count + 1) + ": "));
+                sumw += w;
+                count++;
+                if (count > 6) {
+                    alert("No more than 6 people");
+                    return;
+                }
+            }
+            if (sumw <= 350) {
+                alert("Go Go Go");
+            } else {
+                alert("Over weight");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Weight Checker</h1>
+    <h1>Develop by Pond & Poy</h1>
+    <button onclick="checkWeight()">Check Weight</button><br>
+    <img src="/lift.jpg" >
+</html>
